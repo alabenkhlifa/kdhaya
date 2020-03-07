@@ -1,6 +1,5 @@
 package tn.kdhaya.website.controllers;
 
-import io.swagger.annotations.SwaggerDefinition;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

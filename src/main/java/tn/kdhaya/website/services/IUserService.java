@@ -1,23 +1,22 @@
 package tn.kdhaya.website.services;
 
-import tn.kdhaya.website.entities.Menu;
+import tn.kdhaya.website.dto.UserDTO;
 import tn.kdhaya.website.entities.User;
-import tn.kdhaya.website.exceptions.MenuNotFoundException;
 import tn.kdhaya.website.exceptions.UserNotFoundException;
 
 import java.util.List;
 
 public interface IUserService {
 
-    User save(User user);
+    UserDTO save(User user);
 
-    List<User> saveAll(List<User> userList);
+    List<UserDTO> saveAll(List<User> userList);
 
-    User findById(Long id) throws UserNotFoundException;
+    UserDTO findById(Long id) throws UserNotFoundException;
 
     boolean existsById(Long id);
 
-    List<User> findAll();
+    List<UserDTO> findAll();
 
     long count();
 

@@ -1,14 +1,11 @@
 package tn.kdhaya.website.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import tn.kdhaya.website.entities.BaseUser;
-import tn.kdhaya.website.entities.User;
 import tn.kdhaya.website.exceptions.BaseUserNotFoundException;
-import tn.kdhaya.website.exceptions.UserNotFoundException;
 import tn.kdhaya.website.repositories.BaseUserRepository;
 
 @RestController
@@ -21,8 +18,8 @@ public class BaseUserRestController {
         this.repository = repository;
     }
 
-    @PutMapping("/disactivate/{id}")
-    public void disactivate(@PathVariable Long id) throws BaseUserNotFoundException {
+    @PutMapping("/disable/{id}")
+    public void disable(@PathVariable Long id) throws BaseUserNotFoundException {
         BaseUser baseUser = repository.findById(id).orElseThrow(() -> new BaseUserNotFoundException(id));
         baseUser.setActivated(false);
         repository.save(baseUser);
