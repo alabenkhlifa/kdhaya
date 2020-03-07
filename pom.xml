@@ -13,8 +13,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>website</name>
     <description>Kdhaya website</description>
-
     <properties>
+        <sonar.projectKey>alabenkhlifa_kdhaya</sonar.projectKey>
+        <sonar.organization>alabenkhlifa</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>4ce2162946d0e01b49827ac06607ef8ddc689385</sonar.login>
         <java.version>1.8</java.version>
     </properties>
 
@@ -64,6 +67,12 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.199</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
